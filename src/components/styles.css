@@ -1,0 +1,332 @@
+/* General Styling */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/Proxima.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+    font-family: 'Proxima Nova', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color:black;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header .header-title {
+    padding-left:30px ;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  
+  .header .header-nav {
+    display: flex;
+    gap: 15px;
+    font-size: large;
+  }
+  
+  .header .header-link {
+    color: #000; /* Default link color */
+    text-decoration: none; /* No underline by default */
+    margin-right: 15px; /* Space between links */
+    padding: 5px 10px; /* Add some padding for better click area */
+    border-radius: 5px; /* Optional: Rounded corners for hover effect */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.header .header-link:hover {
+    background-color: rgb(228, 225, 225); /* Change to light gray on hover */
+    color: black; /* Keep the text color same or change it */
+    font-weight: bold; /* Make the font bold on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+.header .header-link.active {
+    font-weight: bold; /* Bold for the active link */ /* Underline for active link */
+    color: #007BFF; /* Customize color for active link */
+}
+  
+  /* Hero Section */
+
+  .hero-section {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures no overflow from child elements */
+  }
+  
+  .hero-content {
+    position: absolute; /* Layered on top of .hero-section */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the content */
+    text-align: center;
+    max-width: 80%; /* Optional: Limit width to create frame effect */
+    padding: 20px; /* Optional: Padding around the text for framing */ /* Optional: semi-transparent background */
+    border-radius: 0px;
+    margin: 0%; /* Optional: Rounded corners */
+  }
+  
+  
+  
+  .highlight {
+    color: #ff4081;
+  }
+  .project-cards-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-decoration: none;
+    padding: 40px;
+  }
+  
+  .proj-card {
+    position: relative; /* Enable positioning for absolute children */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.proj-card:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    position: absolute; /* Position title absolutely */
+    bottom: 20px; /* Position from bottom */
+    left: 0; /* Align to left */
+    right: 0; /* Align to right */
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.8); /* Background with some transparency */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition */
+}
+
+.proj-card:hover .project-content {
+    opacity: 1; /* Show on hover */
+}
+
+.project-title {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 1500;
+    color: #070707;
+}
+
+.learn-more {
+    display: none; /* Hide by default */
+}
+
+.proj-card:hover .learn-more {
+    display: inline-block; /* Show on hover */
+    margin-top: 10px;
+    padding: 8px 16px;
+    color: #000000;
+    background-color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+  
+  /* Project Cards Section */
+  
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  /* Hero Section Links */
+.hero-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.link-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 20px; /* Rounded edge */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.link-button:hover {
+  background-color: #0056b3;
+}
+
+.link-button i {
+  font-size: 18px;
+}
+/* src/styles.css */
+
+.project-layout {
+  padding: 20px;
+}
+
+.project-page {
+  text-align: left; /* Center aligns the title and description */
+  max-width: 800px; /* Optional: Limit width for readability */
+  margin: 0 auto; /* Centers the layout on the page */
+}
+
+.project-image {
+  width: 100%; /* Makes the image take the full width of the container */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Optional: Add some rounding to the image */
+}
+
+.project-title {
+  font-size: 2em; /* Larger font size for the title */
+  margin: 20px 0; /* Space around the title */
+}
+
+/* src/styles.css */
+.project-description {
+  margin-top: 20px;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.project-description h3 {
+  margin-top: 20px;
+  color: #333;
+}
+
+.project-description ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.project-description li {
+  margin-bottom: 10px;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+.header-nav .header-link {
+  text-decoration: none; /* Removes underline */
+  color: black; /* Default link color */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.header-nav .header-link:hover {
+  background-color: lightgray; /* Change to light gray on hover */
+  color: black; /* Optional: Keep the text color the same or change it */
+}
+
+.header-nav .header-link.active {
+  font-weight: bold; /* Active link styling */
+  color: rgb(3, 3, 3); /* Change active link color if needed */
+}
+/* In styles.css or MyStory.css */
+.my-story {
+  padding: 20px; /* Adjust this value to increase or decrease padding */
+  margin: 20px; /* Optional: Add margin around the component */
+  background-color: #000000; /* Optional: Light background color for contrast */
+  border-radius: 5px; 
+  color: #faf8f8;/* Optional: Rounded corners */
+}
+/* In styles.css */
+.footer {
+  text-align: center; /* Center align the footer content */
+  padding-top: 20px; /* Add padding to the footer */
+  background-color:#0b0b0b;
+  font-size: 24px; /* Light background color for the footer */
+}
+
+.footer-links {
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: center; /* Center the icons */
+  margin-top: 10px; /* Space above the icons */
+}
+
+.footer-link {
+  margin: 0 15px; /* Space between icons */
+  color: #626161; /* Default icon color */
+  text-decoration: none; /* Remove underline */
+  font-size: 24px; /* Adjust size of the icons */
+}
+
+.footer-link:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.github-link {
+  display: flex; /* Use flexbox to center the items */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: 10px;
+  color: #000;
+}
+
+
+.about-me-text {
+  font-size: large;
+  flex: 1;
+  line-height: 1.5;
+  padding-right: 500px;
+  padding-left: 150px;
+  padding-bottom: 130px; /* Allow the text to take up available space */
+}
+.minesweeper-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mine-layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* Adjust columns for frame layout */
+  gap: 5px;
+  pointer-events: none; /* Allows interaction only with hero-content */
+}
+
